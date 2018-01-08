@@ -1,12 +1,14 @@
 package cs.bigdata.Lab2;
 
 /**
- * tf-idf 2nd reducer
- * @author Kpakpo Akouete
+ * tf-idf 2nd reducer in the pipeline
+ * Sums frequency of individual n's in same document
+ * OUTPUT : (word@docname , n/N)
+ * 
+ * @author Kpakpo Akouete, Amine Belhaj, Darnel Hossie
  *
  */
 
-import org.apache.hadoop.mapreduce.Job;  
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Reducer;
 
@@ -14,14 +16,10 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-// To complete according to your problem
 
 public class WordFreqForDocsReducer extends Reducer<Text,Text,Text,Text> {
 
-    // Overriding of the reduce function
-
     @Override
-
     protected void reduce(Text cleI, Iterable<Text> values, Context context) throws IOException,InterruptedException
 
     {

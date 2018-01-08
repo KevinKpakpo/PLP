@@ -1,16 +1,14 @@
 package cs.bigdata.Lab2;
+
 /**
- * tf-idf 2nd mapper
- * @author Kpakpo Akouete
- *
+ * tf-idf 2nd mapper in the pipeline
+ * @author Kpakpo Akouete, Amine Belhaj, Darnel Hossie
+ * Input: (word@docname , n)
+ * Output : ( docname , word=n )
  */
 
-import org.apache.hadoop.mapreduce.lib.input.FileSplit;
-import org.apache.hadoop.mapreduce.Job;  
-import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;        
 import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Mapper.Context;
 
 import java.io.IOException;
 

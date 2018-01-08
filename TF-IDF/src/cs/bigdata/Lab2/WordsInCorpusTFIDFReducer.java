@@ -3,17 +3,13 @@ package cs.bigdata.Lab2;
 /**
  * tf-idf 3rd reducer
  * 
- * WordsInCorpusTFIDFReducer calculates the number of documents in corpus that a given key occurs and the TF-IDF computation.
- * The total number of D is acquired from the job name <img scale="0" 
- * src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f642.svg" 
- * alt=":)" class="emoji" draggable="false"> 
- * It is a dirty hack, but the only way I could communicate the number from
- * the driver.
- * @author Kpakpo Akouete
- *
+ * WordsInCorpusTFIDFReducer calculates the number of documents d in corpus that a given key occurs and the TF-IDF computation.
+ * The total number of D is acquired from the job name the driver.
+ * OUTPUT : (word@docname , [d/D, n/N, TF-IDF])
+ * 
+ * @author Kpakpo Akouete, Amine Belhaj, Darnel Hossie
  */
 
-import org.apache.hadoop.mapreduce.Job;  
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Reducer;
 

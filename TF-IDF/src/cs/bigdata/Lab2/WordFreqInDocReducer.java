@@ -1,12 +1,14 @@
 package cs.bigdata.Lab2;
 
 /**
- * tf-idf reducer
- * @author Kpakpo Akouete
+ * tf-idf 1st reducer in the pipeline
+ * Sum counts of words in the document
+ * OUTPUT : (word@docname , n)
+ * 
+ * @author Kpakpo Akouete, Amine Belhaj, Darnel Hossie
  *
  */
-
-import org.apache.hadoop.mapreduce.Job;  
+ 
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
@@ -19,19 +21,19 @@ public class WordFreqInDocReducer extends Reducer<Text,IntWritable,Text,IntWrita
 
     @Override
 
-    protected void reduce(Text cleI, Iterable<IntWritable> listevalI, Context context) throws IOException,InterruptedException
+    protected void reduce(Text word, Iterable<IntWritable> listOfOnes, Context context) throws IOException,InterruptedException
 
     {
         
         int sum = 0;
         
-        for (IntWritable val: listevalI) {
+        for (IntWritable one: listOfOnes) {
 
-            sum += val.get();
+            sum += one.get();
 
         }
 
-        context.write(cleI,new IntWritable(sum));
+        context.write(word,new IntWritable(sum));
 
     }
 

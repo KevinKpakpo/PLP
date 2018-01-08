@@ -1,8 +1,9 @@
 package cs.bigdata.Lab2;
 
 /**
- * tf-idf driver 2 : WordFreqForDocsDriver
- * @author Kpakpo Akouete
+ * tf-idf 2nd job driver in the pipeline
+ * WordFreqForDocsDriver computes the total number of words for each document of the corpus
+ * @author Kpakpo Akouete, Amine Belhaj, Darnel Hossie
  *
  */
 

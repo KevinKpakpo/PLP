@@ -1,17 +1,14 @@
 package cs.bigdata.Lab2;
+
 /**
- * tf-idf 3rd mapper
- * WordsInCorpusTFIDFMapper implements the Job 3 specification for the TF-IDF algorithm
- * @author Kpakpo Akouete
- *
+ * tf-idf 3rd mapper in the pipeline
+ * @author Kpakpo Akouete, Amine Belhaj, Darnel Hossie
+ * Input: (word@docname , n/N)
+ * Output : (word , docname=n/N )
  */
 
-import org.apache.hadoop.mapreduce.lib.input.FileSplit;
-import org.apache.hadoop.mapreduce.Job;  
-import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;        
 import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Mapper.Context;
 
 import java.io.IOException;
 
